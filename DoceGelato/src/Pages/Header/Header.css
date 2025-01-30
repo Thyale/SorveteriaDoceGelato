@@ -66,11 +66,14 @@ header{
 
 
 
-
 /*Menu Principal da página Home*/
 .BarraMenu{
     background-color: aquamarine;
     padding: 20px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 @media (max-width:670px){
