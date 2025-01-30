@@ -1,3 +1,84 @@
-.testecss{
-    color: blueviolet;
+/*Configurações gerais do cabeçalho*/
+header{
+    width: 95vw;
+    margin: auto;
+}
+
+
+
+/*Barra superior do header - container geral de css*/
+.BarraSuperior{
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+/*Barra superior do header - Css do botão whatsapp*/
+.BarraSuperior_BtnWhats{
+    border: none;
+    background-color: rgba(255, 109, 185, 1);
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}
+.BarraSuperior_BtnWhats:hover{
+    background-color:  rgb(255, 24, 144);  
+}
+.BarraSuperior_BtnWhats img{
+    max-width: 20px;
+}
+.BarraSuperior_BtnWhats p{
+    color: rgba(254, 208, 232, 1);
+    font-size: 14px;
+    font-weight: bold;
+}
+/*Barra superior do header - Css dos botoes de login e registro*/
+.BarraSuperior_Container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.BarraSuperior_Container_LoginEndCart{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: center;
+    gap: 5px;
+}
+.BarraSuperior_Container_LoginEndCart p{
+    color: rgba(255, 71, 166, 1);
+    font-size: 14px;
+}
+.BarraSuperior_Container_LoginEndCart svg{
+    color: white;
+    background-color:  rgba(255, 71, 166, 1);
+    padding: 4px;
+    border-radius: 15px;
+}
+.BarraSuperior_Container_LoginEndCart svg:hover{
+    background-color:  rgb(255, 24, 144);  
+}
+
+
+
+
+/*Menu Principal da página Home*/
+.BarraMenu{
+    background-color: aquamarine;
+    padding: 20px 10px;
+}
+
+@media (max-width:670px){
+    /*Tiro os textos dos botões presentes na parte superior do header*/
+    .BarraSuperior_BtnWhats p{
+        display: none;
+    }
+    .BarraSuperior_Container_LoginEndCart p{
+        display: none;
+    }
 }
