@@ -75,9 +75,12 @@ header{
     align-items: center;
     justify-content: space-between;
 }
-.BarraMenu img{
+.BarraMenu_Img{
     width: 20%;
     max-width: 100px;
+}
+.BarraMenu_Img img{
+    width: 100%;
 }
 .BarraMenu_Links{
     display: flex;

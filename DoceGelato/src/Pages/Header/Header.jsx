@@ -20,7 +20,9 @@ export default function Header(){
             </div>
 
             <div className="BarraMenu">
-                <img src="/src/assets/LogoDoceGelato.png" alt="Logotipo do DoceGelato" />
+                <a className="BarraMenu_Img" href={"/"}>
+                   <img src="/src/assets/LogoDoceGelato.png" alt="Logotipo do DoceGelato" />
+                </a>
                 <ul className="BarraMenu_Links">
                     <li><a href="#">Milkshake</a></li>
                     <li><a href="#">Picolé</a></li>
