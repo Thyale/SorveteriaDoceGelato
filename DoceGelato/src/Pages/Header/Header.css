@@ -121,7 +121,7 @@ header{
     color: rgba(255, 109, 185, 1);
 }
 
-@media (max-width:670px){
+@media (max-width:870px){
     /*Tiro os textos dos botões presentes na parte superior do header*/
     .BarraSuperior_BtnWhats p{
         display: none;

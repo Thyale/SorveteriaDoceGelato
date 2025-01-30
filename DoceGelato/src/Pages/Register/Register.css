@@ -1,0 +1,84 @@
+.Register{
+    width: 90vw;
+    max-width: 1400px;
+    margin: auto;
+    background-image: url(/src/assets/Bg-LoginEndRegister.png);
+    padding: 20px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Register_ContainerForm{
+   background: rgba(255, 255, 255, 0.3);
+   backdrop-filter: blur(10px);
+   border-radius: 20px;
+   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.364);
+   width: 80vw;
+   max-width: 600px;
+   padding: 40px 20px;
+   margin: auto;
+   margin-top: 5em;
+   margin-bottom: 5em;
+}
+
+.Register_ContainerForm h1{
+    color: rgba(255, 71, 166, 1);
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.Register_ContainerForm form{
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color:rgba(255, 71, 166, 1) ;
+}
+
+.InputRegister{
+    background-color: rgba(255, 159, 209, 0.38);
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.Btn_Registro{
+    background-color: rgba(255, 71, 166, 1);
+    color: white;
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 20px;
+    width: 100%;
+    max-width: 250px;
+    margin: auto;
+    cursor: pointer;
+}
+.Btn_Registro:hover{
+    background-color: rgb(254, 40, 151);
+}
+
+.Text_Login{
+    text-align: center;
+    color: black;
+}
+.Text_Login a{
+    text-decoration: none;
+    color:rgba(255, 71, 166, 1) ;
+}
+
+@media (max-width:870px) {
+    .Register_ContainerForm{
+        margin-top: 2em;
+        margin-bottom: 2em;
+     }
+}
