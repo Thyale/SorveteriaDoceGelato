@@ -65,15 +65,57 @@ header{
 }
 
 
-
 /*Menu Principal da página Home*/
 .BarraMenu{
-    background-color: aquamarine;
+    background-color: rgba(254, 208, 232, 1);
+    border-radius: 20px;
     padding: 20px 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+.BarraMenu img{
+    width: 20%;
+    max-width: 100px;
+}
+.BarraMenu_Links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    width: 80%;
+    max-width: 800px;
+    justify-content: space-around;
+    gap: 5px;
+}
+.BarraMenu_Links a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 10px rgba(255, 109, 185, 1);
+}
+.BarraMenu_Links a:hover{
+    color: rgba(255, 109, 185, 1);
+}
+
+.BarraMenu_Pesquisa{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+}
+.BarraMenu_Pesquisa input{
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    margin: auto;
+}
+.BarraMenu_Pesquisa svg{
+    color: rgba(255, 109, 185, 1);
 }
 
 @media (max-width:670px){
@@ -82,6 +124,10 @@ header{
         display: none;
     }
     .BarraSuperior_Container_LoginEndCart p{
+        display: none;
+    }
+    /*Tiro a barra de pesquisa do header*/
+    .BarraMenu_Pesquisa{
         display: none;
     }
 }
