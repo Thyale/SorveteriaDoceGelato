@@ -15,7 +15,7 @@
     border-radius: 10px;
 }
 
-/*Section sobre a os favoritos - sorvetes*/
+/*Section sobre a os favoritos - sorvetes, picoles e milks - essa parte junta todo o css*/
 .HomeSorvetes{
     max-width: 1000px;
     width: 90vw;
@@ -40,13 +40,25 @@
     margin-top: 2em;
 }
 
+.HomeSorvetes_Container_div{
+    width: 100%;
+    max-width: 200px;
+}
+
 .HomeSorvetes_Container_div>h1{
     font-size: 16px;
     color: rgba(85, 85, 85, 1);
+    margin-top: 10px;
 }
 .HomeSorvetes_Container_div img{
+    margin: auto;
+    display: flex;
     width: 100%;
     max-width: 150px;
+}
+
+#ImgGrande{
+    max-width: 70px;
 }
 
 .HomeSorvetes_Container_div_Valor{
@@ -77,6 +89,52 @@
     color: rgba(255, 109, 185, 1);
 }
 
+/*Section Sobre a sorveteria*/
+.HomeSobre{
+    max-width: 1000px;
+    width: 90vw;
+    margin: auto;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.HomeSobre img{
+    width: 100%;
+    max-width: 400px;
+}
+
+.HomeSobre h1{
+    border-left: 1px solid;
+    padding: 10px;
+    color: rgba(255, 109, 185, 1);
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.HomeSobre p{
+    color: rgba(85, 85, 85, 1);
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+.HomeSobre button{
+    background-color: rgba(255, 109, 185, 1);
+    color: rgba(254, 208, 232, 1);
+    border-radius: 0px 20px 20px 0px;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    width: 90%;
+    max-width: 500px;
+    cursor: pointer;
+}
+.HomeSobre button:hover{
+    background-color: rgb(255, 69, 165);
+}
+
 @media (max-width:870px) {
     /*Section sobre a propaganda do home*/
     .HomeCapa{
@@ -86,5 +144,9 @@
     .HomeSorvetes_Container{
         justify-content: center;
     }
+    /*Section Sobre a sorveteria*/
+    .HomeSobre{
+       flex-direction: column;
+    }     
 }
 
