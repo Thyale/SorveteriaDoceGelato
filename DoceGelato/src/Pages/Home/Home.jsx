@@ -203,6 +203,14 @@ export default function Home(){
                 </div>
             </section> 
 
+            <section className='HomeNews'>
+                <div>
+                    <h1>Assine Nosso newsletter</h1>
+                    <input placeholder='+DDD 81 9 0000-0000' type="text" name="newsletter" id="newsletter" />
+                    <button>Assinar</button>
+                </div>
+            </section>
+
             {/*  parei no index 18  */}
         </main>
     )
