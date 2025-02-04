@@ -24,9 +24,9 @@ export default function Header(){
                    <img tabIndex={4} src="/src/assets/LogoDoceGelato.png" alt="Logotipo do DoceGelato" />
                 </a>
                 <ul className="BarraMenu_Links">
-                    <li tabIndex={5}><a href="#">Milkshake</a></li>
-                    <li tabIndex={6}><a href="#">Picolé</a></li>
-                    <li tabIndex={7}><a href="#">Sorvete</a></li>
+                    <li tabIndex={5}><a href={`#Sorvetes`}>Sorvete</a></li>
+                    <li tabIndex={6}><a href={`#Milks`}>Milkshake</a></li>
+                    <li tabIndex={7}><a href={`#Picole`}>Picolé</a></li>
                 </ul>
                 <div className="BarraMenu_Pesquisa" aria-label="Campo de pesquisa">
                     <input tabIndex={8} placeholder="PESQUISE POR ALGO" type="text" name="Pesquisa" id="Pesquisa" />

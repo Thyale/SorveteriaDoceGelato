@@ -24,9 +24,13 @@
 }
 
 .HomeSorvetes>h1{
-    color: rgba(255, 109, 185, 1);
+    color: rgb(255, 128, 194);
     border-left: 2px solid;
     padding-left: 10px;
+}
+.HomeSorvetes strong{
+    color: rgb(255, 78, 169);
+    font-weight: bolder;
 }
 
 .HomeSorvetes_Container{
@@ -50,6 +54,7 @@
     color: rgba(85, 85, 85, 1);
     margin-top: 10px;
 }
+
 .HomeSorvetes_Container_div img{
     margin: auto;
     display: flex;
@@ -135,6 +140,37 @@
     background-color: rgb(255, 69, 165);
 }
 
+
+/*Section Sobre as lojas no brasil*/
+.HomeLojas{
+    max-width: 1000px;
+    width: 90vw;
+    margin: auto;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.HomeLojas img{
+    width: 100%;
+    max-width: 400px;
+}
+
+.HomeLojas h1{
+    color: rgba(255, 71, 166, 1);
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+.HomeLojas p{
+    color: rgba(85, 85, 85, 1);
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+
 @media (max-width:870px) {
     /*Section sobre a propaganda do home*/
     .HomeCapa{
@@ -148,5 +184,9 @@
     .HomeSobre{
        flex-direction: column;
     }     
+    /*Section Sobre as lojas no brasil*/
+    .HomeLojas{
+        flex-direction: column-reverse;
+    }
 }
 
