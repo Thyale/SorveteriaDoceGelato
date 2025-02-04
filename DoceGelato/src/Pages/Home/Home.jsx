@@ -210,8 +210,6 @@ export default function Home(){
                     <button>Assinar</button>
                 </div>
             </section>
-
-            {/*  parei no index 18  */}
         </main>
     )
 }
