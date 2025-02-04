@@ -1,0 +1,136 @@
+.SectionCart{
+    background-color: rgba(230, 230, 230, 1);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    width: 95vw;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.SectionCart_Container{
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.SectionCart_Container h1{
+    color: rgba(255, 71, 166, 1);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.SectionCart_Container_Produtos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.SectionCart_Container_Produtos_Item{
+    background-color: rgba(246, 246, 246, 1);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.185);
+    border-radius: 20px;
+    padding: 20px;
+    justify-content: space-between;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.SectionCart_Container_Produtos_Item_Dados{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.SectionCart_Container_Produtos_Item_Dados img{
+    max-width: 70px;
+}
+.SectionCart_Container_Produtos_Item_Dados h2{
+    font-size: 16px;
+    color: rgba(85, 85, 85, 1);
+    margin-bottom: 4px;
+}
+.SectionCart_Container_Produtos_Item_Dados svg{
+    margin-bottom: 10px;
+}
+.SectionCart_Container_Produtos_Item_Dados p{
+    background-color: rgba(255, 109, 185, 0.38);
+    color: white;
+    width: 60px;
+    text-align: center;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.SectionCart_Container_Produtos_Item_Quantidade{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 159, 209, 0.38);
+    color: white;
+    width: 30px;
+    text-align: center;
+    border-radius: 20px;
+    gap: 5px;
+}
+.SectionCart_Container_Produtos_Item_Quantidade button{
+    border-radius: 20px;
+    border: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+#btnAdicionar{
+    background-color: rgba(255, 109, 185, 1);
+    width: 100%;
+}
+#btnAdicionar:hover{
+    background-color: rgb(255, 66, 164);
+}
+#btnRetirar{
+    background-color: rgba(255, 109, 185, 0.38);
+}
+#btnRetirar:hover{
+    background-color: rgba(255, 130, 194, 0.38);
+}
+
+
+
+
+.SectionCart_Container_Valores{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+.SectionCart_Container_Valores div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: rgba(141, 141, 141, 1);
+    font-size: 15px;
+}
+#DivTotalCart{
+    border-top: 1px solid rgba(255, 71, 166, 1);
+    padding-top: 10px;
+    color: black;
+}
+.SectionCart_Container_Valores button{
+    outline: none;
+    border: none;
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgba(255, 71, 166, 1);
+    color: white;
+    cursor: pointer;
+}
+.SectionCart_Container_Valores button:hover{
+    background-color: rgb(255, 31, 147);
+}
