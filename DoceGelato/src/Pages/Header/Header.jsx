@@ -1,10 +1,12 @@
 export default function Header(){
 
+    //Recuperamos o usuario registrado e logado para pegar o nome 
     let usuarioRecuperado = JSON.parse(localStorage.getItem("Usuario"));
 
-    //pegamos o valor do local storage que mostrar se foi feito o login
+    //pegamos o valor do local storage que mostrar se foi feito o login (1)
     const loginSalvo = localStorage.getItem("LoginRealizado");
 
+    //Ao clicar em login, se o usuario ja estiver cadastrado, ele vai mostrar a mensagem que ja está logado e não vai para a rota de login.
     function MsmUserCadastado(){
         if(loginSalvo == "1"){
             alert("o usuário ja está cadastado")

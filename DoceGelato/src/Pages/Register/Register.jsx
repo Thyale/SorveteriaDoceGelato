@@ -10,12 +10,12 @@ export default function Register() {
   }
   localStorage.setItem("Usuario", JSON.stringify(Usuario));
 
-  //Criei as variáveis pra salvar o que foi escrito no input
+  //Criei as variáveis pra salvar o que foi escrito no input de registro
   const [emailRegistro, setEmailRegistro] = useState("")
   const [senhaRegistro, setSenhaRegistro] = useState("")
   const [nomeRegistro, setNomeegistro] = useState("")
 
-  // ao clicar em salvar, vamos verificar se os campos foram escritos, se forem nos pegamos o objeto que estava vazio e colocamos as novas informações escritas nos inputs e atualizamos ele, e se nao tiver aparece a mensagem de preencher tudo. 
+  // Ao clicar em salvar, vamos verificar se todos os campos foram preenchidos. Caso esteja tudo completo, nos pegamos o objeto que estava vazio e colocamos as novas informações escritas nos inputs, atualizamos ele e falamos que o user ja foi cadastrado e mandamos para o login. Se não tiver aparece a mensagem de preencher tudo antes de realizar o cadastro.
   function SalvandoUsuarioRegistrado() {
 
     if (!emailRegistro || !senhaRegistro || !nomeRegistro) {

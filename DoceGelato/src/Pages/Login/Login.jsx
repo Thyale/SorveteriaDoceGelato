@@ -2,14 +2,16 @@ import { useState } from "react"
 
 export default function Login(){
 
-    //Variáveis que vao ver o que foi digitado no login
+    //Variáveis que vão armazenar o que foi escrito nos inputs de Login
     const [emailLogin, setEmailLogin] = useState("")
     const [senhaLogin, setSenhaLogin] = useState("")
 
+    //Criei a variavel que vai está inicialmente com valor 0 e vai mudar pra 1 quando o login for relizado com sucesso
     const [LoginRealizado, setLoginRealizado] = useState(
         localStorage.getItem("LoginRealizado") || "0"
     );
-    //Aqui eu vou fazer um if e um else, se o login for igual aos dados cadastrados no usuario registrado ele entra, se não for ele da a mensagem de que precisa ser feito o registro.
+
+    //Recuperei os dados salvos do objeto de Usuario, do localstorage, e comparei com o que foi escrito no login. Se tiver igual ao objeto ele aparece a mensagem de login realizado com sucesso e muda a variavel de login para 1. Se não foi igual ele fala que pode ter algum dado errado ou o usuario não ta cadastrado e manda para o registro.
     function VerificarLoginUser() {
         let usuarioRecuperado = JSON.parse(localStorage.getItem("Usuario"));
     
