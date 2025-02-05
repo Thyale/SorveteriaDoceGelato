@@ -21,6 +21,13 @@ export default function Cart(){
                 confirmButtonColor: '#FF6DB9',
               })
         }else{
+            Swal.fire({
+                title: 'Erro!',
+                text: 'Para continuar é preciso realizar o Login',
+                icon: 'warning',
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#FF6DB9',
+            })
             navigate("/Login");
         }
     }
