@@ -54,6 +54,9 @@ header{
     color: rgba(255, 71, 166, 1);
     font-size: 14px;
 }
+.ImgLoginRelizado{
+    width:40px;
+}
 .BarraSuperior_Container_LoginEndCart svg{
     color: white;
     background-color:  rgba(255, 71, 166, 1);

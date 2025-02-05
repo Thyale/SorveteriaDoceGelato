@@ -6,15 +6,22 @@ export default function Login(){
     const [emailLogin, setEmailLogin] = useState("")
     const [senhaLogin, setSenhaLogin] = useState("")
 
+    const [LoginRealizado, setLoginRealizado] = useState(
+        localStorage.getItem("LoginRealizado") || "0"
+    );
     //Aqui eu vou fazer um if e um else, se o login for igual aos dados cadastrados no usuario registrado ele entra, se não for ele da a mensagem de que precisa ser feito o registro.
-    function VerificarLoginUser(){
+    function VerificarLoginUser() {
         let usuarioRecuperado = JSON.parse(localStorage.getItem("Usuario"));
-        if(usuarioRecuperado.emailUsuario === emailLogin & usuarioRecuperado.senhaUsuario === senhaLogin){
-            alert("Usuaio reconheido e entrando")
-        }else{
-            alert("não possiu registro, faça agora")
+    
+        if (usuarioRecuperado && usuarioRecuperado.emailUsuario === emailLogin && usuarioRecuperado.senhaUsuario === senhaLogin) {
+          alert("Usuário reconhecido, volte para o home");
+          setLoginRealizado("1"); // Atualiza o estado
+          localStorage.setItem("LoginRealizado", "1"); // Salva no localStorage
+          console.log(LoginRealizado)
+        } else {
+          alert("Não possui registro, faça agora");
         }
-    }
+      }
 
     return(
         <section className="Login">
