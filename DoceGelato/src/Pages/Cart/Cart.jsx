@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+
 export default function Cart(){
     const navigate = useNavigate();
 
@@ -8,9 +10,17 @@ export default function Cart(){
     //Ao clicar em finalizar a compra, se o usuario ja estiver cadastrado, ele vai direto para o pagamento e e se nao tiver ele vai para o login.
     function Pagamento(){
         if(loginSalvo == "1"){
-            alert("indo para pagamento")
+            Swal.fire({
+                title: 'Pagamento Realizado!',
+                text: 'Sua compra foi concluída com sucesso.',
+                icon: 'success',
+                imageUrl: './src/assets/QrCodePagamento.png',
+                imageWidth: 170,  
+                imageHeight: 200,
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#FF6DB9',
+              })
         }else{
-            alert("vai para login")
             navigate("/Login");
         }
     }
