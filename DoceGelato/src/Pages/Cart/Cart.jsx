@@ -1,4 +1,20 @@
+import { useNavigate } from "react-router-dom";
 export default function Cart(){
+    const navigate = useNavigate();
+
+    //pegamos o valor do local storage que mostrar se foi feito o login (1)
+    const loginSalvo = localStorage.getItem("LoginRealizado");
+
+    //Ao clicar em finalizar a compra, se o usuario ja estiver cadastrado, ele vai direto para o pagamento e e se nao tiver ele vai para o login.
+    function Pagamento(){
+        if(loginSalvo == "1"){
+            alert("indo para pagamento")
+        }else{
+            alert("vai para login")
+            navigate("/Login");
+        }
+    }
+
     return(
         <section className="SectionCart">
             <div className="SectionCart_Container">
@@ -47,7 +63,7 @@ export default function Cart(){
                         <p>Valor total da compra</p>
                         <p>R$0,00</p>
                     </div>
-                    <button>Finalizar a compra</button>
+                    <button onClick={Pagamento}>Finalizar a compra</button>
                 </div>
             </div>
         </section>
