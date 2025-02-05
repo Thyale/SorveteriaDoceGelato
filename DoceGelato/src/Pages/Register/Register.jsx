@@ -1,12 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export default function Register() {
+  const navigate = useNavigate();
 
   //Criando o objeto CENTRAL de Usuário, vazio e salvamos no localStorage
   const Usuario = {
-    nomeUsuario: "",
-    emailUsuario: "",
-    senhaUsuario: "",
+    nomeUsuario: "tytytytyty",
+    emailUsuario: "tytytytytyt",
+    senhaUsuario: "tytytytytyty",
   }
   localStorage.setItem("Usuario", JSON.stringify(Usuario));
 
@@ -19,7 +22,14 @@ export default function Register() {
   function SalvandoUsuarioRegistrado() {
 
     if (!emailRegistro || !senhaRegistro || !nomeRegistro) {
-      alert("Preencha todos os campos!");
+      Swal.fire({
+        title: `Oops`,
+        text: 'Preencha todos os campos antes de se cadastrar!',
+        icon: 'warning',
+        showConfirmButton: false,
+        timer: 3000, 
+        timerProgressBar: true,
+      });
     } else {
       let usuarioRecuperado = JSON.parse(localStorage.getItem("Usuario"));
 
@@ -28,7 +38,15 @@ export default function Register() {
       usuarioRecuperado.senhaUsuario = senhaRegistro;
 
       localStorage.setItem("Usuario", JSON.stringify(usuarioRecuperado));
-      alert("Usuário cadastrado com sucesso! Volte e faça o login.");
+      Swal.fire({
+        title: 'Usuário cadastrado com sucesso!',
+        text: 'Direcionando para o Login',
+        icon: 'success', 
+        showConfirmButton: false,
+        timer: 3000, 
+        timerProgressBar: true, 
+      });
+      navigate("/Login");
     }    
   }  
 

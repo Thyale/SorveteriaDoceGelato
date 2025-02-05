@@ -1,4 +1,6 @@
 import { useState } from "react"
+import Swal from 'sweetalert2';
+import { useNavigate } from "react-router-dom";
 
 export default function Login(){
 
@@ -11,17 +13,32 @@ export default function Login(){
         localStorage.getItem("LoginRealizado") || "0"
     );
 
+    let usuarioRecuperado = JSON.parse(localStorage.getItem("Usuario"));
+
+    const navigate = useNavigate();
     //Recuperei os dados salvos do objeto de Usuario, do localstorage, e comparei com o que foi escrito no login. Se tiver igual ao objeto ele aparece a mensagem de login realizado com sucesso e muda a variavel de login para 1. Se não foi igual ele fala que pode ter algum dado errado ou o usuario não ta cadastrado e manda para o registro.
     function VerificarLoginUser() {
-        let usuarioRecuperado = JSON.parse(localStorage.getItem("Usuario"));
-    
         if (usuarioRecuperado && usuarioRecuperado.emailUsuario === emailLogin && usuarioRecuperado.senhaUsuario === senhaLogin) {
-          alert("Usuário reconhecido, volte para o home");
+          Swal.fire({
+            title: `Seja bem-vindo ${usuarioRecuperado.nomeUsuario}`,
+            text: 'Vamos direcionar para o Home',
+            icon: 'success',
+            showConfirmButton: false,
+            timer: 2000, 
+            timerProgressBar: true,
+          });          
           setLoginRealizado("1"); // Atualiza o estado
           localStorage.setItem("LoginRealizado", "1"); // Salva no localStorage
-          console.log(LoginRealizado)
+          navigate("/");
         } else {
-          alert("Não possui registro, faça agora");
+          Swal.fire({
+            title: 'Error!',
+            text: 'Senha incorreta ou usuário não cadastrado',
+            icon: 'error', 
+            showConfirmButton: false,
+            timer: 2000, 
+            timerProgressBar: true,
+          });
         }
       }
 

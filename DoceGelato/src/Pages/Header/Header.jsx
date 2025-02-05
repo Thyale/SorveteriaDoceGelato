@@ -1,3 +1,6 @@
+import Swal from "sweetalert2";
+
+
 export default function Header(){
 
     //Recuperamos o usuario registrado e logado para pegar o nome 
@@ -9,7 +12,14 @@ export default function Header(){
     //Ao clicar em login, se o usuario ja estiver cadastrado, ele vai mostrar a mensagem que ja está logado e não vai para a rota de login.
     function MsmUserCadastado(){
         if(loginSalvo == "1"){
-            alert("o usuário ja está cadastado")
+            Swal.fire({
+                title: `Oops`,
+                text: 'O usuário já está cadastrado!',
+                icon: 'warning',
+                showConfirmButton: false,
+                timer: 3000, 
+                timerProgressBar: true,
+              });
         }
     }
 
