@@ -15,7 +15,6 @@ export default function Header(){
             Swal.fire({
                 title: `Oops`,
                 text: 'O usuário já está cadastrado!',
-                icon: 'warning',
                 showConfirmButton: false,
                 timer: 3000, 
                 timerProgressBar: true,
@@ -34,7 +33,7 @@ export default function Header(){
                 <div className="BarraSuperior_Container">
                         { //Vai alternar se o login ja estiver feito ou não
                           loginSalvo === "1" ? (
-                            <a tabIndex={2} aria-label="Botão de link que dará para o Login e registro" className="BarraSuperior_Container_LoginEndCart" href="">
+                            <a tabIndex={2} aria-label="Botão de link que dará para o Login e registro" className="BarraSuperior_Container_LoginEndCart" href="#">
                             <p>{usuarioRecuperado.nomeUsuario}</p>
                               <img onClick={MsmUserCadastado} className="ImgLoginRelizado" src="./src/assets/ImgLoginRealizado.png" alt="Usuário logado" />
                             </a>
