@@ -1,8 +1,10 @@
+import IconDoceGelato from "../assets/Images/LogoDoceGelato.png"
+
 export default function Footer(){
     return(
         <footer>
             <a className="ImgFooter" href={"/"}>
-                <img src="/src/assets/LogoDoceGelato.png" alt="Logotipo do DoceGelato" />
+                <img src={IconDoceGelato} alt="Logotipo do DoceGelato" />
             </a>
             <div className="ContainerLinksFooter">
                 <div className="ContainerLinksFooter_Divs">

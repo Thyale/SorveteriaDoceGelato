@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Cart from "./Pages/Cart/Cart"
-import Home from "./Pages/Home/Home"
-import Login from "./Pages/Login/Login"
-import Register from "./Pages/Register/Register"
+import Cart from "./Components/Cart"
+import Home from "./Components/Home";
+import Login from "./Components/Login";
+import Register from "./Components/Register"
 
 const AppRoutes = () => {
   return (

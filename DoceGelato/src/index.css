@@ -1,7 +1,766 @@
+/*Geral*/
 *{margin: 0;padding: 0;}
 html{height: 100vh;width: 100vw;font-family: "Julius Sans One", serif;overflow-x: hidden;}
 ::-webkit-scrollbar {width: 10px;}
 ::-webkit-scrollbar-track {background: #cfcfcf;border-radius: 10px;}
 ::-webkit-scrollbar-thumb {background: rgba(255, 109, 185, 1);border-radius: 10px;}
 ::-webkit-scrollbar-thumb:hover {background: rgb(254, 67, 164);}
+
+/*Configurações gerais do cabeçalho*/
+header{
+    width: 95vw;
+    margin: auto;
+}
+
+/*Barra superior do header - container geral de css*/
+.BarraSuperior{
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+/*Barra superior do header - Css do botão whatsapp*/
+.BarraSuperior_BtnWhats{
+    border: none;
+    background-color: rgba(255, 109, 185, 1);
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}
+.BarraSuperior_BtnWhats:hover{
+    background-color:  rgb(255, 24, 144);  
+}
+.BarraSuperior_BtnWhats img{
+    max-width: 20px;
+}
+.BarraSuperior_BtnWhats p{
+    color: rgba(254, 208, 232, 1);
+    font-size: 14px;
+    font-weight: bold;
+}
+/*Barra superior do header - Css dos botoes de login e registro*/
+.BarraSuperior_Container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.BarraSuperior_Container_LoginEndCart{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: center;
+    gap: 5px;
+}
+.BarraSuperior_Container_LoginEndCart p{
+    color: rgba(255, 71, 166, 1);
+    font-size: 14px;
+}
+.ImgLoginRelizado{
+    width:40px;
+}
+.BarraSuperior_Container_LoginEndCart svg{
+    color: white;
+    background-color:  rgba(255, 71, 166, 1);
+    padding: 4px;
+    border-radius: 15px;
+}
+.BarraSuperior_Container_LoginEndCart svg:hover{
+    background-color:  rgb(255, 24, 144);  
+}
+
+
+/*Menu Principal da página Home*/
+.BarraMenu{
+    background-color: rgba(254, 208, 232, 1);
+    border-radius: 20px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.BarraMenu_Img{
+    width: 20%;
+    max-width: 100px;
+}
+.BarraMenu_Img img{
+    width: 100%;
+}
+.BarraMenu_Links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    width: 80%;
+    max-width: 800px;
+    justify-content: space-around;
+    gap: 5px;
+}
+.BarraMenu_Links a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 10px rgba(255, 109, 185, 1);
+}
+.BarraMenu_Links a:hover{
+    color: rgba(255, 109, 185, 1);
+}
+
+.BarraMenu_Pesquisa{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+}
+.BarraMenu_Pesquisa input{
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    margin: auto;
+}
+.BarraMenu_Pesquisa svg{
+    color: rgba(255, 109, 185, 1);
+}
+
+@media (max-width:870px){
+    /*Tiro os textos dos botões presentes na parte superior do header*/
+    .BarraSuperior_BtnWhats p{
+        display: none;
+    }
+    .BarraSuperior_Container_LoginEndCart p{
+        display: none;
+    }
+    /*Tiro a barra de pesquisa do header*/
+    .BarraMenu_Pesquisa{
+        display: none;
+    }
+}
+
+/*Section sobre a propaganda do home*/
+.HomeCapa{
+    width: 70vw;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.HomeCapa_Swiper{
+    text-align: center;
+}
+
+.HomeCapa_Swiper img{
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+/*Section sobre a os favoritos - sorvetes, picoles e milks - essa parte junta todo o css*/
+.HomeSorvetes{
+    max-width: 1000px;
+    width: 90vw;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.HomeSorvetes>h1{
+    color: rgb(255, 128, 194);
+    border-left: 2px solid;
+    padding-left: 10px;
+}
+.HomeSorvetes strong{
+    color: rgb(255, 78, 169);
+    font-weight: bolder;
+}
+
+.HomeSorvetes_Container{
+    padding: 20px 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.HomeSorvetes_Container_div{
+    width: 100%;
+    max-width: 200px;
+}
+
+.HomeSorvetes_Container_div>h1{
+    font-size: 16px;
+    color: rgba(85, 85, 85, 1);
+    margin-top: 10px;
+}
+
+.HomeSorvetes_Container_div img{
+    margin: auto;
+    display: flex;
+    width: 100%;
+    max-width: 150px;
+}
+
+#ImgGrande{
+    max-width: 70px;
+}
+
+.HomeSorvetes_Container_div_Valor{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.HomeSorvetes_Container_div_Valor>svg{
+    background-color: rgba(255, 109, 185, 1);
+    color: white;
+    cursor: pointer;
+    outline: none;
+    padding: 4px 5px;
+    border-radius: 10px;
+}
+.HomeSorvetes_Container_div_Valor>svg:hover{
+    background-color: rgb(255, 56, 159);
+}
+.HomeSorvetes_Container_div_Valor p{
+    margin-top: 10px;
+    background-color: rgba(255, 109, 185, 0.38);
+    color: white;
+    text-align: center;
+    padding: 2px;
+}
+.bibi-star-fill{
+    color: rgba(255, 109, 185, 1);
+}
+
+/*Section Sobre a sorveteria*/
+.HomeSobre{
+    max-width: 1000px;
+    width: 90vw;
+    margin: auto;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.HomeSobre img{
+    width: 100%;
+    max-width: 400px;
+}
+
+.HomeSobre h1{
+    border-left: 1px solid;
+    padding: 10px;
+    color: rgba(255, 109, 185, 1);
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.HomeSobre p{
+    color: rgba(85, 85, 85, 1);
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+.HomeSobre button{
+    background-color: rgba(255, 109, 185, 1);
+    color: rgba(254, 208, 232, 1);
+    border-radius: 0px 20px 20px 0px;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    width: 90%;
+    max-width: 500px;
+    cursor: pointer;
+}
+.HomeSobre button:hover{
+    background-color: rgb(255, 69, 165);
+}
+
+
+/*Section Sobre as lojas no brasil*/
+.HomeLojas{
+    max-width: 1000px;
+    width: 90vw;
+    margin: auto;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.HomeLojas img{
+    width: 100%;
+    max-width: 400px;
+}
+
+.HomeLojas h1{
+    color: rgba(255, 71, 166, 1);
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+.HomeLojas p{
+    color: rgba(85, 85, 85, 1);
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+/*Section Newsletter*/
+.HomeNews{
+    background-color: rgba(255, 109, 185, 1);
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+.HomeNews div{
+    background-color: rgba(255, 94, 177, 1);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.309);
+    color: white;
+    text-align: center;
+}
+.HomeNews h1{
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+.HomeNews input{
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    width: 80%;
+    margin-bottom: 20px;
+    text-align: center;
+    outline: none;
+}
+.HomeNews button{
+    background-color: rgba(254, 208, 232, 1);
+    color: rgba(255, 71, 166, 1);
+    border-radius: none;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 50%;
+    max-width: 100px;
+}
+.HomeNews button:hover{
+    background-color: rgb(255, 183, 220);
+}
+
+
+@media (max-width:870px) {
+    /*Section sobre a propaganda do home*/
+    .HomeCapa{
+        width: 90vw;
+    }
+    /*Section sobre a os favoritos - sorvetes*/
+    .HomeSorvetes_Container{
+        justify-content: center;
+    }
+    /*Section Sobre a sorveteria*/
+    .HomeSobre{
+       flex-direction: column;
+    }     
+    /*Section Sobre as lojas no brasil*/
+    .HomeLojas{
+        flex-direction: column-reverse;
+    }
+}
+
+.Login{
+    width: 90vw;
+    max-width: 1400px;
+    margin: auto;
+    background-image: url(/src/assets/Bg-LoginEndRegister.png);
+    padding: 20px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Login_ContainerForm{
+   background: rgba(255, 255, 255, 0.3);
+   backdrop-filter: blur(10px);
+   border-radius: 20px;
+   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.364);
+   width: 80vw;
+   max-width: 600px;
+   padding: 40px 20px;
+   margin: auto;
+   margin-top: 5em;
+   margin-bottom: 5em;
+}
+
+.Login_ContainerForm h1{
+    color: rgba(255, 71, 166, 1);
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.Login_ContainerForm form{
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color:rgba(255, 71, 166, 1) ;
+}
+
+.InputUser{
+    background-color: rgba(255, 159, 209, 0.38);
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.Text_EsqueceuSenha{
+    margin: 10px 0 30px 0px;
+    font-size: 14px;
+    text-align: center;
+    color: rgb(114, 114, 114);
+}
+.Text_EsqueceuSenha a{
+    color: black;
+    text-decoration: none;
+}
+
+.Btn_login{
+    background-color: rgba(255, 71, 166, 1);
+    color: white;
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 20px;
+    width: 100%;
+    max-width: 250px;
+    margin: auto;
+    cursor: pointer;
+}
+.Btn_login:hover{
+    background-color: rgb(254, 40, 151);
+}
+
+.Text_Registro{
+    text-align: center;
+    color: black;
+}
+.Text_Registro a{
+    text-decoration: none;
+    color:rgba(255, 71, 166, 1) ;
+}
+
+@media (max-width:870px) {
+    .Login_ContainerForm{
+        margin-top: 2em;
+        margin-bottom: 2em;
+     }
+}
+
+.Register{
+    width: 90vw;
+    max-width: 1400px;
+    margin: auto;
+    background-image: url(/src/assets/Bg-LoginEndRegister.png);
+    padding: 20px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Register_ContainerForm{
+   background: rgba(255, 255, 255, 0.3);
+   backdrop-filter: blur(10px);
+   border-radius: 20px;
+   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.364);
+   width: 80vw;
+   max-width: 600px;
+   padding: 40px 20px;
+   margin: auto;
+   margin-top: 5em;
+   margin-bottom: 5em;
+}
+
+.Register_ContainerForm h1{
+    color: rgba(255, 71, 166, 1);
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.Register_ContainerForm form{
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color:rgba(255, 71, 166, 1) ;
+}
+
+.InputRegister{
+    background-color: rgba(255, 159, 209, 0.38);
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.Btn_Registro{
+    background-color: rgba(255, 71, 166, 1);
+    color: white;
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 20px;
+    width: 100%;
+    max-width: 250px;
+    margin: auto;
+    cursor: pointer;
+}
+.Btn_Registro:hover{
+    background-color: rgb(254, 40, 151);
+}
+
+.Text_Login{
+    text-align: center;
+    color: black;
+}
+.Text_Login a{
+    text-decoration: none;
+    color:rgba(255, 71, 166, 1) ;
+}
+
+@media (max-width:870px) {
+    .Register_ContainerForm{
+        margin-top: 2em;
+        margin-bottom: 2em;
+     }
+}
+
+.SectionCart{
+    background-color: rgba(230, 230, 230, 1);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    width: 95vw;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.SectionCart_Container{
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.SectionCart_Container h1{
+    color: rgba(255, 71, 166, 1);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.SectionCart_Container_Produtos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.SectionCart_Container_Produtos_Item{
+    background-color: rgba(246, 246, 246, 1);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.185);
+    border-radius: 20px;
+    padding: 20px;
+    justify-content: space-between;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.SectionCart_Container_Produtos_Item_Dados{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.SectionCart_Container_Produtos_Item_Dados img{
+    max-width: 70px;
+}
+.SectionCart_Container_Produtos_Item_Dados h2{
+    font-size: 16px;
+    color: rgba(85, 85, 85, 1);
+    margin-bottom: 4px;
+}
+.SectionCart_Container_Produtos_Item_Dados svg{
+    margin-bottom: 10px;
+}
+.SectionCart_Container_Produtos_Item_Dados p{
+    background-color: rgba(255, 109, 185, 0.38);
+    color: white;
+    width: 60px;
+    text-align: center;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.SectionCart_Container_Produtos_Item_Quantidade{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 159, 209, 0.38);
+    color: white;
+    width: 30px;
+    text-align: center;
+    border-radius: 20px;
+    gap: 5px;
+}
+.SectionCart_Container_Produtos_Item_Quantidade button{
+    border-radius: 20px;
+    border: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+#btnAdicionar{
+    background-color: rgba(255, 109, 185, 1);
+    width: 100%;
+}
+#btnAdicionar:hover{
+    background-color: rgb(255, 66, 164);
+}
+#btnRetirar{
+    background-color: rgba(255, 109, 185, 0.38);
+}
+#btnRetirar:hover{
+    background-color: rgba(255, 130, 194, 0.38);
+}
+
+
+
+
+.SectionCart_Container_Valores{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+.SectionCart_Container_Valores div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: rgba(141, 141, 141, 1);
+    font-size: 15px;
+}
+#DivTotalCart{
+    border-top: 1px solid rgba(255, 71, 166, 1);
+    padding-top: 10px;
+    color: black;
+}
+.SectionCart_Container_Valores button{
+    outline: none;
+    border: none;
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgba(255, 71, 166, 1);
+    color: white;
+    cursor: pointer;
+}
+.SectionCart_Container_Valores button:hover{
+    background-color: rgb(255, 31, 147);
+}
+
+footer{
+    width: 95vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.ImgFooter{
+    width: 30%;
+    max-width: 200px;
+}
+.ImgFooter img{
+    width: 100%;
+}
+
+.ContainerLinksFooter{
+    padding: 10px;
+    width: 80%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+.ContainerLinksFooter_Divs h1{
+    color: black;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.ContainerLinksFooter_Divs li{
+    color: rgb(92, 92, 92);
+    margin-top: 5px;
+    cursor: pointer;
+    font-size:16px;
+    text-shadow: 2px 2px 20px black;
+    list-style: none;
+}
+.ContainerLinksFooter_Divs li:hover{
+    color: rgb(55, 55, 55);
+}
+
+@media (max-width:870px){
+    /*Deixando o footer em colunas*/
+    footer{
+        flex-direction: column;
+        align-items: start;
+    }
+    
+    .ContainerLinksFooter{
+        flex-direction: column;
+    }
+}
+
+
   
